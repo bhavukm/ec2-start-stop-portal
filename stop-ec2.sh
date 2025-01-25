@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# while-menu: a menu-driven system information program
-#export PS1=" \[\033[34m\]\u@\h \[\033[33m\]\w\[\033[31m\]\[\033[00m\] $ "
-#echo -e '\033[0;31mred\033[0;32mgreen\033[0;34mblue\033[0mnormal'
 DELAY=10 # Number of seconds to display results
 RED="31"
 GREEN="32"
@@ -19,11 +16,6 @@ while true; do
 echo -e "${BOLDGREEN}1. Instance1${ENDCOLOR}"
 echo -e "${BOLDGREEN}2. Instance2${ENDCOLOR}"
 echo -e "${BOLDGREEN}3. Go Back to Main Menu${ENDCOLOR}"
-#1. Start test-ec2-1
-#2. Stop test-ec2-1
-#3. Check current status of test-ec2-1
-
-#_EOF_
 
   read -p "Enter selection [1-3] > "
 
