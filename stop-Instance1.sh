@@ -5,8 +5,8 @@ dialog --title "WARNING" \
 response=$?
 case $response in
    0)
-     aws ec2 stop-instances --instance-ids i-08280bb7eb97da3c3
-     aws ec2 describe-instances --instance-ids i-08280bb7eb97da3c3 --query 'Reservations[].Instances[].[Tags[?Key==`Name`]| [0].Value,State.Name]'
+     aws ec2 stop-instances --instance-ids i-Instance-ID1
+     aws ec2 describe-instances --instance-ids i-Instance-ID1 --query 'Reservations[].Instances[].[Tags[?Key==`Name`]| [0].Value,State.Name]'
      echo -e "\e[0;31m Instance1 has been stopped \e[0m";;
    1)
      echo -e "\e[0;32m Instance1 was not stopped \e[0m";;
