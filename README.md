@@ -8,7 +8,7 @@
 
 ![image](https://github.com/user-attachments/assets/02bcaf0f-0a94-40d3-9575-aad5aaaca157)
 
-Step-By-Step Instructions:
+**Step-By-Step Instructions:**
 
 1. Provision 3 EC2 Instances (Amazon Linux 2023 AMI): 1 will be Manager's Bastion Host and the other 2 will be developer's instances to be administered by the manager.
 2. Create an IAM Policy (attached in the git repo) to have Start/Stop access to the 2 instances.
