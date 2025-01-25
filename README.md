@@ -10,30 +10,11 @@
 
 Step-By-Step Instructions:
 
-1. Provision 3 EC2 Instances: 1 will be Manager's Bastion Host and the other 2 will be developer's instances to be administered by the manager.
-2. Create an IAM Policy to have Start/Stop access to the 2 instances, as given below:
-   {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "ec2:DescribeInstances",
-                "ec2:DescribeInstanceStatus",
-                "ec2:DescribeTags"
-            ],
-            "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "ec2:StartInstances",
-                "ec2:StopInstances"
-            ],
-            "Resource": [
-                "arn:aws:ec2:us-east-1:AWS-Account-ID:instance/i-InstanceID1",
-                "arn:aws:ec2:us-east-1:970547378834:instance/i-InstanceID2"
-            ]
-        }
-    ]
-}
+1. Provision 3 EC2 Instances (Amazon Linux 2023 AMI): 1 will be Manager's Bastion Host and the other 2 will be developer's instances to be administered by the manager.
+2. Create an IAM Policy (attached in the git repo) to have Start/Stop access to the 2 instances.
+3. Create an IAM Role and attach the IAM Policy created in Step 2 to it. Attach the IAM Role to the Bastion Host.
+4. SSH to the Bastion Host as root and install "git" and "dialog" packages: "yum install git -y && yum install dialog -y"
+5. Clone the repo to copy the bash scripts (git clone <repo-url>). Replace the placeholders in the script with your values.
+6. Create a user named portaluser and set the password: "useradd portaluser" ; "passwd portaluser". Modify the /etc/ssh/sshd_config file to enable "PasswordAuthentication".
+7. Restart the sshd service: "systemctl restart sshd".
+8. Login with portaluser user and test the scripts.
