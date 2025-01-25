@@ -47,12 +47,7 @@ read -p "Enter selection [1-4] > "
         continue
         ;;
       4)
-	      sudo pkill -SIGKILL -u edmun && logout
-	     # pkill -u edmun
-	     # exit
-            #  kill -9 -1
-      # ./logout.sh
-      # read -p "Press enter to continue"
+	      pkill -SIGKILL -u portaluser && logout
        continue
        ;;
     esac
