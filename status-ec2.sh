@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# while-menu: a menu-driven system information program
-#export PS1=" \[\033[34m\]\u@\h \[\033[33m\]\w\[\033[31m\]\[\033[00m\] $ "
-#echo -e '\033[0;31mred\033[0;32mgreen\033[0;34mblue\033[0mnormal'
 DELAY=10 # Number of seconds to display results
 RED="31"
 GREEN="32"
@@ -25,12 +22,12 @@ read -p "Enter selection [1-3] > "
 if ((REPLY >= 1 && REPLY <= 3)); then
     case $REPLY in
 1)
-	aws ec2 describe-instances --instance-ids i-08280bb7eb97da3c3 --query 'Reservations[].Instances[].[Tags[?Key==`Name`]| [0].Value,State.Name]'
+	aws ec2 describe-instances --instance-ids i-Instance-ID1 --query 'Reservations[].Instances[].[Tags[?Key==`Name`]| [0].Value,State.Name]'
         read -p "Press enter to continue"
         continue
         ;;
 2)
-        aws ec2 describe-instances --instance-ids i-088cf1b557396cbb8 --query 'Reservations[].Instances[].[Tags[?Key==`Name`]| [0].Value,State.Name]'
+        aws ec2 describe-instances --instance-ids i-Instance-ID2 --query 'Reservations[].Instances[].[Tags[?Key==`Name`]| [0].Value,State.Name]'
        read -p "Press enter to continue"
        continue
         ;;
