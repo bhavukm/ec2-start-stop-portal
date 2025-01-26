@@ -11,7 +11,7 @@
 **Step-By-Step Instructions:**
 
 1. Provision 3 EC2 Instances (Amazon Linux 2023 AMI): 1 will be Manager's Bastion Host and the other 2 will be developer's instances to be administered by the manager.
-2. Create an IAM Policy (attached in the git repo) to have Start/Stop access to the 2 instances. Replace the placeholder for the 2 Instance IDs.
+2. Create an IAM Policy (attached in the git repo) to have Start/Stop access to the 2 instances. Replace the placeholder for the 2 Instance IDs and your AWS Account ID.
 3. Create an IAM Role and attach the IAM Policy created in Step 2 to it. Attach the IAM Role to the Bastion Host.
 4. SSH to the Bastion Host as root and install "git" and "dialog" packages: "yum install git -y && yum install dialog -y"
 5. Clone the repo to copy the bash scripts (git clone <repo-url>). Replace the placeholders in the script with your values.
