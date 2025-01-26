@@ -44,9 +44,7 @@ echo -e "${BOLDGREEN}3. Go Back to Main Menu${ENDCOLOR}"
     esac
   else
           echo -e "\e[32mInvalid Entry\e[0m"
- #   echo "Invalid entry."
     read -p "Press enter to continue"
-   # sleep $DELAY
   fi
 done
 echo "Program terminated."
