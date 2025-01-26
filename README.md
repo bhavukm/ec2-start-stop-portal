@@ -17,4 +17,5 @@
 5. Clone the repo to copy the bash scripts (git clone <repo-url>). Replace the placeholders in the script with your values.
 6. Create a user named portaluser and set the password: "useradd portaluser" ; "passwd portaluser". Modify the /etc/ssh/sshd_config file to enable "PasswordAuthentication".
 7. Restart the sshd service: "systemctl restart sshd".
-8. Login with portaluser user and test the scripts.
+8. Add start-stop-ec2-script.sh in .bash_profile of portaluser.
+9. Login with portaluser user and test the scripts.
