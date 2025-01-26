@@ -11,11 +11,20 @@
 **Step-By-Step Instructions:**
 
 1. Provision 3 EC2 Instances (Amazon Linux 2023 AMI): 1 will be Manager's Bastion Host and the other 2 will be developer's instances to be administered by the manager.
-2. Create an IAM Policy (attached in the git repo) to have Start/Stop access to the 2 instances.
+2. Create an IAM Policy (attached in the git repo) to have Start/Stop access to the 2 instances. Replace the placeholder for the 2 Instance IDs.
 3. Create an IAM Role and attach the IAM Policy created in Step 2 to it. Attach the IAM Role to the Bastion Host.
 4. SSH to the Bastion Host as root and install "git" and "dialog" packages: "yum install git -y && yum install dialog -y"
 5. Clone the repo to copy the bash scripts (git clone <repo-url>). Replace the placeholders in the script with your values.
 6. Create a user named portaluser and set the password: "useradd portaluser" ; "passwd portaluser". Modify the /etc/ssh/sshd_config file to enable "PasswordAuthentication".
 7. Restart the sshd service: "systemctl restart sshd".
-8. Add start-stop-ec2-script.sh in .bash_profile of portaluser.
-9. Login with portaluser user and test the scripts.
+8. Copy all the scripts to /home/portaluser directory (cp /root/ec2-start-stop-portal/s* /home/portaluser/).
+9. Change the permissions to allow portaluser to run the scripts.
+    chown -R portaluser: /home/portaluser/*
+    chmod 777 /home/portaluser/*
+11. Add start-stop-ec2-script.sh in .bash_profile of portaluser.
+    vim /home/portaluser/.bash_profile
+    
+    ![image](https://github.com/user-attachments/assets/77b1c8cf-e61d-47a0-882b-fac6406fa822)
+    
+
+13. Login with portaluser user and test the scripts.
