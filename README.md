@@ -28,3 +28,6 @@
     
 
 13. Login with portaluser user and test the scripts.
+
+    <img width="672" alt="ec2-start-stop-portal" src="https://github.com/user-attachments/assets/4c7c4553-855c-4c79-80c1-36017cb52fe2" />
+
