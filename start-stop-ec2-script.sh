@@ -11,7 +11,6 @@ ENDCOLOR="\e[0m"
 while true; do
   clear
 echo -e "${BOLDGREEN}Please Select:${ENDCOLOR}"
-#Please Select:
 echo -e "${BOLDGREEN}1. Start Instances${ENDCOLOR}"
 echo -e "${BOLDGREEN}2. Stop Instances${ENDCOLOR}"
 echo -e "${BOLDGREEN}3. Check Status Of Instances${ENDCOLOR}"
