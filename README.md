@@ -1,3 +1,5 @@
+**YouTube Video:** https://youtu.be/bp-V9_AlrMo
+
 # A Bash Script-based User Interactive Portal to Start and Stop AWS EC2 Instances
 
 **Problem Statement**: A manager who manages multiple developers working on various applications deployed on multiple AWS EC2 Instances has been advised by Senior Management to regularly stop a few instances when the developers are not using them. This is to support **AWS Cost Optimization** project currently happening in the company. The problem is that the manager has no knowledge on how to use AWS Management console or CLI to start/stop these instances. He has asked for a **User Interface** to do this. Also, the Security Team wants to refrain from giving the AWS Management Console access to him.
